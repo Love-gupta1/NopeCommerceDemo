@@ -22,7 +22,7 @@ public class BaseClass {
     public static void setup(String browserName) {
         if (browserName.equalsIgnoreCase("chrome")) {
             driver = WebDriverManager.chromedriver().create();
-            driver.navigate().to("https://demo.nopcommerce.com/"));
+            driver.navigate().to("https://demo.nopcommerce.com/");
             driver.manage().window().maximize();
             pageFactory = new PageFactory(driver);
         } else if (browserName.equalsIgnoreCase("firefox")) {
