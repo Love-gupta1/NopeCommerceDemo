@@ -20,6 +20,7 @@ public class ComputerPage {
     By Checkbox = By.xpath("//input[contains(@name,'termsofservice')] ");
     By Checkout = By.xpath("//button[@name='checkout'] ");
     By RegisterButton = By.xpath("//button[text()='Register'] ");
+    By Gender = By.xpath("//input[@id='gender-male']");
 
     public ComputerPage(WebDriver driver) {
         this.driver = driver;
@@ -46,6 +47,7 @@ public class ComputerPage {
         driver.findElement(Checkbox).click();
         driver.findElement(Checkout).click();
         driver.findElement(RegisterButton).click();
+        driver.findElement(Gender).click();
         Assert.assertEquals(driver.findElement(By.xpath("//div[@class='content-header']/h1")).getText(), "Dashboard");
     }
     }
